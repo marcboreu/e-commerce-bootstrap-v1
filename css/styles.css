@@ -1,0 +1,315 @@
+/*-- Reboot Css --*/
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    text-decoration: none;
+    color: orangered;
+}
+
+
+/*-- Nav --*/
+
+nav .container {
+  padding: 20px;
+  align-items: flex-end!important;
+  margin: o;
+}
+.navbar {
+    position: fixed;
+    display: block;
+}
+.logo-img > a > img {
+    width: 50vw;
+    max-width: 250px;
+    display: flex;
+    justify-content: center;
+
+}
+.bar-search {
+    position: absolute;
+    margin-top: 40vh;
+    z-index: 2;
+    min-width: 85vw;
+}
+.container-bar-search {
+    display: flex;
+    justify-content: center;
+}
+#button-bar-search {
+  background-color: orangered;
+  border-radius: 0 10% 10% 0;
+  border: none;
+}
+#button-bar-search > i {
+  padding: 0 15px;
+}
+.selectors {
+  
+  display: flex;
+  position: absolute;
+  margin-top: 132px;
+  z-index: 40;
+}
+  /*-- Header-Slider --*/
+
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*-- Page Content Home Row 1 --*/
+
+/*-- Video-Section --*/
+.video-section {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-section video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.video-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.video-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  .video-section {
+    background: url("https://source.unsplash.com/XT5OInaElMw/1600x900") black
+      no-repeat center center scroll;
+  }
+  .video-section video {
+    display: none;
+  }
+}
+
+/*-- Footer --*/
+.footer {
+  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)),
+    url(../img/forest.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer .footer_top {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footer_top .footer_logo > a > img {
+    width: 50vw;
+    max-width: 250px;
+    padding-bottom: 3%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+.footer_top .footer_logo > p {
+    color: white;
+}
+.google-map-footer{
+    display: flex;
+    justify-content: center;
+    margin: auto;"
+}
+.footer_top > div > div > div > h3 {
+    color: white;
+    text-align: center;
+}
+.footer_top > div > div > div > h3 > div {
+  color: white;
+  text-align: center;
+}
+.footer_top > div > div > div > div {
+  color: white;
+  text-align: center;
+}
+.footer_top .container .row.d-flex.align-content-around > div > .list-group ul {
+  flex-direction: column;
+}
+  .footer .footer_top .menu_links ul li a:hover {
+    color: orangered;
+  }
+  .footer .social_links ul li a i {
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    background: transparent;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    line-height: 40px !important;
+    margin-right: 0px;
+    color: #e7f9f9;
+    line-height: 40px !important;
+    border: 1px solid #e7f9f9;
+    font-size: 14px;
+  }
+#btn-newsletter {
+  background-color: black;
+  border-radius: 0 10% 10% 0;
+  border: 1px solid;
+}
+#btn-newsletter:hover {
+  background-color: orangered;
+  border:none;
+}
+#btn-newsletter > i {
+  padding: 0 15px;
+}
+
+  .footer .copy-right_text .copy_right {
+    font-size: 15px;
+    color: white;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+  .footer .list-group ul > li {
+    list-style: none;
+  }
+  .footer .social_links {
+    margin-left: 25%; 
+  }
+  .footer .social_links ul > li {
+    text-align: left;
+    text-decoration: none;
+    color: white!important;
+    list-style: none;
+  }
+  .footer .social_links ul li {
+      display: inline-block;
+      padding: 5px 0px;
+    }
+    .footer .social_links ul li a:hover {
+      color: orangered;
+    }
+    .footer_top > div > div > div > div > ul {
+      display: flex;
+      justify-content: space-evenly;
+      list-style: none;
+    }
+    .footer_top > div > div > div > div > ul > li {
+      padding: 0px 5px;
+    }
+
+/*-- Footer - Copyright & MarcBoreu Logo --*/
+.footer .copy-right_text {
+    background: #1f1f1fb8;
+    color: white;
+  }
+  .footer .copy-right_text .footer_border {
+    padding-bottom: 10px;
+    border-top: 1px solid #363636;
+  }
+
+.container-logo img {
+  width: 35px;
+  height: auto;
+  display: inline-block;
+  z-index: 100;
+  padding: 0 10px;
+}
+
+a.container-logo {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.container-logo img:hover {
+  transform: rotate(360deg);
+  -webkit-transition: 1.2s ease-in-out;
+  -moz-transition: 1.2s ease-in-out;
+  -o-transition: 1.2s ease-in-out;
+  transition: 1.2s ease-in-out;
+}
+
+/*--  Media Querys --*/
+
+@media (max-width: 767px) {
+.col-md-6 {
+    padding: 8%;
+}
+  .footer .footer_top {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .footer .footer_top .menu_links {
+    margin-top: 15px;
+  }
+  .footer .footer_top .menu_links ul li {
+    margin-right: 10px;
+  }
+  .footer .copy-right_text .copy_right {
+    font-size: 13px;
+  }
+  .footer .social_links {
+    text-align: left;
+    margin-top: 30px;
+  }
+}
+
+/* 768px - 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .footer .footer_top {
+    padding-top: 25px;
+    padding-bottom: 30px;
+  }
+  .footer .footer_top .menu_links ul li {
+    margin-right: 30px;
+  }
+  .footer .social_links {
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+/* 992px - 1200px */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .footer .footer_top {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+  .footer .footer_top .menu_links ul li {
+    margin-right: 30px;
+  }
+}
+
+
+

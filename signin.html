@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>wooDesign Online Store</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon -->
+    <link rel="icon" type="image/gif" href="img/favicon.png">
+    <!-- Bootstrap 4.3 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <!-- Font Awesome 4.7.0 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- CSS Developed by MarcBoreu-->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-xl navbar-light bg-light fixed-top">
+        <div class="container">
+            <div class="logo-img col-2">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse col-10" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Inicio
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Colecciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Artistas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Más vendidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Novedades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Próximamente</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-item dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" id="dropdownMenu" type="button"
+                                data-toggle="dropdown">
+                                Tienda
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+                                <button class="dropdown-item" type="button"
+                                    onclick="window.location.href='/login.html'">Iniciar
+                                    sesión</button>
+                                <button class="dropdown-item" type="button"
+                                    onclick="window.location.href='/signin.html'">Registrarse</button>
+                                <button class="dropdown-item" type="button">Favoritos</button>
+                                <button class="dropdown-item" type="button">Carrito</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="selectors" style="margin-top: 0px;">
+        <form class="form-horizontal" role="form" name="currency">
+            <div class="col-lg-12">
+                <select id="idCurrency" name="chain" class="form-control selectpicker">
+                    <option>Euro</option>
+                    <option>Dollar</option>
+                    <option>Pounds</option>
+                </select>
+            </div>
+        </form>
+        <form class="form-horizontal" role="form" name="language">
+            <div class="col-lg-12">
+                <select id="idCountry" name="country" class="form-control selectpicker">
+                    <option>Español</option>
+                    <option>Català</option>
+                    <option>English</option>
+                    <option>Italiano</option>
+                    <option>Français</option>
+                    <option>Portuguese</option>
+                    <option>Deutsch</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <!-- Page Content -->
+    <div class="container-fluid" style="margin-top: 140px; padding: 0px;">
+        <div class="row">
+            <div class="col-lg-10 col-xl-9 mx-auto">
+                <div class="card card-signin flex-row my-5">
+                    <div class="card-img-left d-none d-md-flex">
+                        <!-- Background image for card set in CSS! -->
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Registrarse</h5>
+                        <form class="form-signin" name="form-signin" action="server.php" method="post" id="registro"
+                            onsubmit="return submitUserForm();">
+                            <div class="form-row">
+                                <!-- NAME -->
+                                <div class="col-12 mb-4 position-relative">
+                                    <label for="registro_nombre">Nombre <i class="fa fa-asterisk fa-xs"
+                                            style="color: red"></i></label> <input type="text" name="nombre"
+                                        id="registro_nombre" class="form-control  ">
+                                    <div class="invalid-feedback" style="text-align: end;">
+                                        <p class="name-alert-empty">No puede estar vacío</p>
+                                        <p class="name-alert-format">Formato incorrecto, solo puede contener letras</p>
+                                    </div>
+                                </div>
+                                <!-- SURNAME -->
+                                <div class="col-12 mb-4 position-relative">
+                                    <label for="registro_apellidos">Apellidos <i class="fa fa-asterisk fa-xs"
+                                            style="color: red"></i></label> <input type="text" name="apellidos"
+                                        id="registro_apellidos" class="form-control  ">
+                                    <div class="invalid-feedback" style="text-align: end;">
+                                        <p class="surname-alert-empty">No puede estar vacío</p>
+                                        <p class="surname-alert-format">Formato incorrecto, solo puede contener letras
+                                        </p>
+                                    </div>
+                                    <!-- PROVINCIA -->
+                                    <div class="col-12 mt-4 mb-4 position-relative">
+                                        <label for="registro_provincia">Selecciona tu provincia <i
+                                                class="fa fa-asterisk fa-xs" style="color: red"></i></label>
+                                        <select required name="provincia" id="registro_provincia" class="form-control">
+                                            <option value=""> Escoge tu provincia </option>
+                                            <option value=" Álava / Araba "> Álava / Araba </option>
+                                            <option value=" Albacete "> Albacete </option>
+                                            <option value=" Alicante "> Alicante </option>
+                                            <option value=" Almería "> Almería </option>
+                                            <option value=" Asturias "> Asturias </option>
+                                            <option value=" Ávila "> Ávila </option>
+                                            <option value=" Badajoz "> Badajoz </option>
+                                            <option value=" Baleares "> Baleares </option>
+                                            <option value=" Barcelona "> Barcelona </option>
+                                            <option value=" Burgos "> Burgos </option>
+                                            <option value=" Cáceres "> Cáceres </option>
+                                            <option value=" Cádiz "> Cádiz </option>
+                                            <option value=" Cantabria "> Cantabria </option>
+                                            <option value=" Castellón "> Castellón </option>
+                                            <option value=" Ceuta "> Ceuta </option>
+                                            <option value=" Ciudad Real "> Ciudad Real </option>
+                                            <option value=" Córdoba "> Córdoba </option>
+                                            <option value=" Cuenca "> Cuenca </option>
+                                            <option value=" Gerona / Girona "> Gerona / Girona </option>
+                                            <option value=" Granada "> Granada </option>
+                                            <option value=" Guadalajara "> Guadalajara </option>
+                                            <option value=" Guipúzcoa / Gipuzkoa "> Guipúzcoa / Gipuzkoa </option>
+                                            <option value=" Huelva "> Huelva </option>
+                                            <option value=" Huesca "> Huesca </option>
+                                            <option value=" Jaén "> Jaén </option>
+                                            <option value=" La Coruña / A Coruña "> La Coruña / A Coruña </opción>
+                                            <option value=" La Rioja "> La Rioja </option>
+                                            <option value=" Las Palmas "> Las Palmas </option>
+                                            <option value=" León "> León </option>
+                                            <option value=" Lérida / Lleida "> Lérida / Lleida </option>
+                                            <option value=" Lugo "> Lugo </option>
+                                            <option value=" Madrid "> Madrid </option>
+                                            <option value=" Málaga "> Málaga </option>
+                                            <option value=" Melilla "> Melilla </option>
+                                            <option value=" Murcia "> Murcia </option>
+                                            <option value=" Navarra "> Navarra </option>
+                                            <option value=" Orense / Ourense "> Orense / Ourense </option>
+                                            <option value=" Palencia "> Palencia </option>
+                                            <option value=" Pontevedra "> Pontevedra </option>
+                                            <option value=" Salamanca "> Salamanca </option>
+                                            <option value=" Segovia "> Segovia </option>
+                                            <option value=" Sevilla "> Sevilla </option>
+                                            <option value=" Soria "> Soria </option>
+                                            <option value=" Tarragona "> Tarragona </option>
+                                            <option value=" Tenerife "> Tenerife </option>
+                                            <option value=" Teruel "> Teruel </option>
+                                            <option value=" Toledo "> Toledo </option>
+                                            <option value=" Valencia "> Valencia </option>
+                                            <option value=" Valladolid "> Valladolid </option>
+                                            <option value=" Vizcaya / Bizkaia "> Vizcaya / Bizkaia </option>
+                                            <option value=" Zamora "> Zamora </option>
+                                            <option value=" Zaragoza "> Zaragoza </option>
+                                        </select>
+                                        <div class="invalid-feedback" style="text-align: end;">
+                                            Campo obligatorio</div>
+                                    </div>
+                                    <!-- EMAIL -->
+                                    <div class="col-12 mb-4 position-relative">
+                                        <label for="contacto_email">E-mail <i class="fa fa-asterisk fa-xs"
+                                                style="color: red"></i></label>
+                                        <input type="text" name="email" id="registro_email" class="form-control">
+                                        <div class="invalid-feedback" style="text-align: end;">
+                                            <p class="email-alert-empty">No puede estar vacío</p>
+                                            <p class="email-alert-format">Formato incorrecto, email no válido</p>
+                                        </div>
+                                    </div>
+                                    <!-- PASSWORD -->
+                                    <div class="col-12 mb-4 position-relative">
+                                        <label for="registro_password">Password <i class="fa fa-asterisk fa-xs"
+                                                style="color: red"></i></label> <input
+                                            placeholder=" Máximo 12 caracteres " type="password" name="password"
+                                            id="registro_password" class="form-control">
+                                        <div class="invalid-feedback" style="text-align: end;">
+                                            <p class="password-alert-empty">No puede estar vacío</p>
+                                            <p class="password-alert-format">No más de 12 caracteres</p>
+                                        </div>
+                                    </div>
+                                    <!-- CONFIRM PASSWORD -->
+                                    <div class="col-12 mb-4 position-relative">
+                                        <label for="confirmar_password">Confirmar Password <i
+                                                class="fa fa-asterisk fa-xs" style="color: red"></i></label> <input
+                                            placeholder=" Deben coincidir " type="password" name="password2"
+                                            id="confirmar_password" class="form-control">
+                                        <div class="invalid-feedback" style="text-align: end;">
+                                            <p class="password2-alert-empty">No puede estar vacío</p>
+                                            <p class="password2-format-empty">Las contaseñas no coinciden</p>
+                                        </div>
+                                    </div>
+                                    <!-- BUTTON SUBMIT SEND FORM -->
+                                    <div class="col-12 d-flex justify-content-center mt-2">
+                                        <button type="submit" class="btn btn-secondary"
+                                            id="buttonSubmit">Registrarse</button>
+                                    </div>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.form -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row d-flex align-content-around">
+                    <!-- Footer Column 1 -->
+                    <div class="col-xl-3 col-md-6 col-sm-12 mb-5 text-center">
+                        <div class="footer_logo wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                            <a href="index.html">
+                                <img src="img/logo.png" alt="">
+                            </a>
+                            <p class="text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                                Carrer Maria Teresa 23
+                                <br>
+                                Barcelona 08014
+                                <br>
+                                654332211
+                            </p>
+                            <div class="google-map-footer wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.095620256838!2d2.1463910616331936!3d41.37200720271496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDIyJzE5LjIiTiAywrAwOCc1MS4zIkU!5e0!3m2!1ses!2ses!4v1593554063866!5m2!1ses!2ses"
+                                    width="200px" height="200px" frameborder="0" style="border:0;" allowfullscreen=""
+                                    aria-hidden="false" tabindex="0">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Footer Column 1 End -->
+                    <!-- Footer Column 2 -->
+                    <div class="col-xl-3 col-md-6 col-sm-12 mb-5 text-center">
+                        <h3 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay=".1s">Sobre Nosotros</h3>
+                        <div class="list-group">
+                            <ul>
+                                <li><a class="wow fadeInDown" data-wow-duration="1s" data-wow-delay=".2s"
+                                        href="#">Historia</a></li>
+                                <li><a class="wow fadeInDown" data-wow-duration="1s" data-wow-delay=".4s"
+                                        href="#">FAQS</a></li>
+                                <li><a class="wow fadeInDown" data-wow-duration="1s" data-wow-delay=".6s"
+                                        href="#">Política de
+                                        cookies</a></li>
+                                <li><a class="wow fadeInDown" data-wow-duration="1s" data-wow-delay=".8s"
+                                        href="#">Política de
+                                        privacidad</a></li>
+                                <li><a class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="1s"
+                                        href="#">Términos y
+                                        condiciones</a></li>
+                                <li><a class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="1.1s"
+                                        href="#">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Footer Column 2 End -->
+                    <!-- Footer Column 3 -->
+                    <div class="col-xl-3 col-md-6 col-sm-12 mb-5 text-center">
+                        <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">Síguenos!</h3>
+                        <div class="social_links">
+                            <ul class="list-group text-center">
+                                <li><a class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s" href="#"> <i
+                                            class="fa fa-facebook"></i> wooDesign</a></li>
+                                <li><a class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s" href="#"> <i
+                                            class="fa fa-twitter"></i> @wooDesign</a></li>
+                                <li><a class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s" href="#"> <i
+                                            class="fa fa-instagram"></i> @wooDesign</a></li>
+                                <li><a class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s" href="#"> <i
+                                            class="fa fa-pinterest"></i> wooDesign</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Footer Column 3 End -->
+                    <!-- Footer Column 4 -->
+                    <div class="col-xl-3 col-md-6 col-sm-12 mb-5 text-center">
+                        <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">Newsletter</h3>
+                        <form action="#" name="newsletter">
+                            <div class="form-group">
+                                <div class="input-group rounded-2 mb-3">
+                                    <input type="text" class="form-control" placeholder='Escribe tu email'
+                                        onfocus="this.placeholder = 'Prometemos no spameear'">
+                                    <div class="input-group-append">
+                                        <button id="btn-newsletter"
+                                            class="button rounded-2 primary-bg text-white w-100 btn_1 boxed-btn"
+                                            type="submit"><i class="fa fa-envelope-o" aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <h3 class="m-3 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".7s">Métodos de pago</h3>
+                        <div class="payment-methods">
+                            <ul class="list-group list-group-horizontal text-center">
+                                <li><a class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s"
+                                        href="https://www.stripe.com" target="_blank"> <i
+                                            class="fa fa-cc-stripe"></i></a></li>
+                                <li><a class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s"
+                                        href="https://www.paypal.com" target="_blank"> <i
+                                            class="fa fa-cc-paypal"></i></a></li>
+                                <li><a class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s"
+                                        href="https://www.visa.com" target="_blank"> <i class="fa fa-cc-visa"></i></a>
+                                </li>
+                                <li><a class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s"
+                                        href="https://www.mastercard.com" target="_blank"> <i
+                                            class="fa fa-cc-mastercard"></i></a></li>
+                                <li><a class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s"
+                                        href="https://www.jcb.com" target="_blank"> <i class="fa fa-cc-jcb"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Footer Column 4 End -->
+                </div>
+            </div>
+        </div>
+        <!-- Footer Row Copyright -->
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">|
+                            Copyright
+                            &copy;
+                            <script>document.write(new Date().getFullYear());</script> | Todos los derechos reservados |
+                        </p>
+                        <div class="col-xl-12">
+                            <p class="text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
+                                <a class="container-logo" href="https://marcboreu.es">Sitio web creado y desarrollado
+                                    por MarcBoreu <img src="img/logoMB.png" target="_blank"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer end  -->
+    <!-- JS here -->
+    <script src="js/form_register.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
